@@ -5,11 +5,6 @@ BluetoothSerial ESP_BT;
 
 int command;
 
-int IN_1 = 5; // Kanan
-int IN_2 = 18; // Kanan
-int IN_3 = 19; // Kiri
-int IN_4 = 21; // Kiri
-
 void setup() {
   drive::setup();
   
@@ -31,21 +26,17 @@ void loop() {
     }
     if (command == 66)
     {
-      //Backward
       drive::backward();
     }
     if (command == 76)
     {
-      //Left
       drive::turn_left();
     }
     if (command == 82)
     {
-      //Right
       drive::turn_right();
     }
     if (command == 83) {
-      //Stop
       drive::stop();
     }
   }
